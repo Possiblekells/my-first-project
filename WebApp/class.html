@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div>
+      <label for="name">Name</label>
+      <input type="text" id="name" value="" placeholder="Name..." /> <span><h2 class="My Name"></h2></span>
+      <div class="myName"></div>
+
+      <label for="cohort">Cohort</label>
+      <input type="text" id="cohort" value="" placeholder="Cohort..." /> <span><h2 class="Cohort"></h2></span>
+      <div class="Cohort"></div>
+
+      <label for="bio">Bio</label>
+      <input type="text" id="bio" value="" placeholder="Bio..." /> <span><h2 class="My Bio"></h2></span>
+      <div class="myBio"></div>
+      <button onclick="submit()">Submit</button>
+    </div>
+
+    <script>
+      function submit() {
+        const submitName = document.getElementById("name").value;
+        const submitCohort = document.getElementById("cohort").value;
+        const submitBio = document.getElementById("bio").value;
+
+        document.getElementsByClassName("myName")[0].innerHTML =
+          `My Name, ${submitName}`;
+        document.getElementsByClassName("Cohort")[0].innerHTML =
+          `My Cohort, ${submitCohort}`;
+        document.getElementsByClassName("myBio")[0].innerHTML =
+          `My Bio is, ${submitBio}`;
+      }
+    </script>
+  </body>
+</html>

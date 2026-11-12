@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+</head>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: white;
+        margin: 0;
+        padding: 30;
+    }
+
+    .calculator {
+        background-color: black;
+        width: 400px;
+        max-width: 100%;
+        padding: 30px;
+        border-radius: 30px;
+        box-sizing: border-box;
+    }
+
+    #display {
+        width: 100%;
+        height: 80px;
+        box-sizing: border-box;
+        margin-bottom: 150px;
+        background-color: #f7f7f0;
+        border-radius: 5px;
+        font-size: 35px;
+        text-align: right;
+        padding: 15px;
+    }
+
+    .buttons {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        column-gap: 25px;
+        row-gap: 80px;
+    }
+
+    button {
+        font-size: 32px;
+        padding: 8px, 0;
+        cursor: pointer;
+        border: 1px, solid #888;
+        border-radius: 4px;
+        background-color: #eee;
+        color: black;
+    }
+
+    button:hover {
+        background-color: #ccc;
+    }
+
+    @media (max-width: 400px) {
+        body {
+            padding: 15px;
+        }
+        .calculator {
+            padding: 20px;
+        }
+        .buttons {
+            column-gap: 10px;
+            row-gap: 45px;
+        }
+        #display {
+            height: 150px;
+            margin-bottom: 100px;
+        }
+        button {
+            font-size: 24p;
+        }
+    }
+</style>
+<body>
+    <div class="calculator">
+        <input type="text" id="display" readonly>
+        <div class="buttons">
+            <button onclick="addNumber('1')">1</button>
+            <button onclick="addNumber('2')">2</button>
+            <button onclick="addNumber('3')">3</button>
+            <button onclick="addNumber('4')">4</button>
+            <button onclick="addNumber('5')">5</button>
+
+            <button onclick="addNumber('6')">6</button>
+            <button onclick="addNumber('7')">7</button>
+            <button onclick="addNumber('8')">8</button>
+            <button onclick="addNumber('9')">9</button>
+            <button onclick="addNumber('0')">0</button>
+
+            <button onclick="chooseOperator('+')">+</button>
+            <button onclick="chooseOperator('-')">-</button>
+            <button onclick="chooseOperator('/')">/</button>
+            <button onclick="chooseOperator('*')">*</button>
+            <button onclick="calculate()">=</button>
+        </div>
+
+    </div>
+    <script src="cal.js"></script>
+</body>
+</html>
